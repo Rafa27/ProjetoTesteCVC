@@ -13,13 +13,19 @@ require 'csv'
 require 'socket'
 
 require 'utils/Utils'
-require 'pages/Global/LoginPage'
 require 'pages/Global/HomePage'
+require 'pages/Global/HomePageLocator'
 
 client = Selenium::WebDriver::Remote::Http::Default.new
 client.timeout = 90
 
-browser = Watir::Browser.new :chrome, :http_client => client
+browser = Watir::Browser.new :ie, :http_client => client
 browser.goto "http://www.cvc.com.br/index.aspx"
 browser.window.maximize
 $browser = browser
+
+#
+#chcp 65001
+#cd C:\ProjetoTesteCVC
+#cucumber --format html --out report.html --tag @PESQUISA
+#
