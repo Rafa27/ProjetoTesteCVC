@@ -11,16 +11,17 @@ class HomePage < HomePageLocator
     end
 
     def pesquisa_origin_destino (origin, destino)
-    #validar_pagina_carregada
+    validar_pagina_carregada
     preencher_origin(origin)
     preencher_destino(destino)
-    clicar_elemento(btn_buscar, 'Buscar')
+    
     #aguardar_loading
     end
 
     def pesquisa_ida_volta (data_ida, data_volta)
     preencher_data_ida(data_ida)
     preencher_data_volta(data_volta)
+    clicar_elemento(btn_buscar, 'Buscar')
     end
 
 ###################################################################################
