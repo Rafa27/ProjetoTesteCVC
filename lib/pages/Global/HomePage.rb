@@ -10,13 +10,17 @@ class HomePage < HomePageLocator
     @tela = 'Página Inicial'
     end
 
-    def pesquisa_basica (origin, destino)
-    validar_pagina_carregada
+    def pesquisa_origin_destino (origin, destino)
+    #validar_pagina_carregada
     preencher_origin(origin)
     preencher_destino(destino)
     clicar_elemento(btn_buscar, 'Buscar')
-    aguardar_loading
+    #aguardar_loading
+    end
 
+    def pesquisa_ida_volta (data_ida, data_volta)
+    preencher_data_ida(data_ida)
+    preencher_data_volta(data_volta)
     end
 
 ###################################################################################
@@ -31,6 +35,14 @@ class HomePage < HomePageLocator
 
     def preencher_destino(destino)
         preencher_input(label_local_destino, destino, 'Destino')
+    end
+
+    def preencher_data_ida(data_ida)
+        preencher_input(label_data_ida, data_ida, 'Ida')
+    end
+
+    def preencher_data_volta(data_volta)
+        preencher_input(label_data_volta, data_volta, 'Volta')
     end
 
 end

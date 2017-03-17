@@ -4,3 +4,7 @@
 [0316/171228.765:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: O pipe está sendo fechado. (0xE8)
 [0316/171727.348:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: O pipe está sendo fechado. (0xE8)
 [0317/090046.753:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: O pipe está sendo fechado. (0xE8)
+[0317/093515.943:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: O pipe está sendo fechado. (0xE8)
+[0317/093657.889:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: O pipe está sendo fechado. (0xE8)
+[0317/093913.281:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: O pipe está sendo fechado. (0xE8)
+[0317/094107.235:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: O pipe está sendo fechado. (0xE8)

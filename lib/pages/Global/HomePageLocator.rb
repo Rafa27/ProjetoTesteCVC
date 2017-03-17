@@ -22,7 +22,7 @@ class HomePageLocator
     end
 
     def btn_buscar
-        @driver.button(id: 'btnSearch')
+        @driver.div(id: 'btnSearch')
     end
 
     def label_pacote
