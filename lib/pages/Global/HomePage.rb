@@ -13,17 +13,28 @@ class HomePage < HomePageLocator
     def pesquisa_origin_destino (origin, destino)
     validar_pagina_carregada
     preencher_origin(origin)
+    sleep 3
+    pressionar_enter
     preencher_destino(destino)
-    
-    #aguardar_loading
+    sleep 3
+    pressionar_enter
     end
 
     def pesquisa_ida_volta (data_ida, data_volta)
     preencher_data_ida(data_ida)
     preencher_data_volta(data_volta)
-    clicar_elemento(btn_buscar, 'Buscar')
+    pressionar_enter
+    efetuar_pesquisa
     end
 
+    def pressionar_enter
+    $browser.send_keys :enter
+    end
+
+    def efetuar_pesquisa
+        clicar_elemento(btn_buscar, 'Buscar')
+    end
+    
 ###################################################################################
 
     def validar_pagina_carregada
@@ -39,10 +50,12 @@ class HomePage < HomePageLocator
     end
 
     def preencher_data_ida(data_ida)
+        elemento_existe?(label_data_ida, 'Ida')
         preencher_input(label_data_ida, data_ida, 'Ida')
     end
 
     def preencher_data_volta(data_volta)
+        elemento_existe?(label_data_volta, 'Volta')
         preencher_input(label_data_volta, data_volta, 'Volta')
     end
 

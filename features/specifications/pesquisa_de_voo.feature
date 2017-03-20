@@ -5,5 +5,6 @@ Funcionalidade: Pesquisa de voo.
 
 @PESQUISA
 Cenario: Pesquisando se existe voo
-Dado que o usuário coloque o destino de "São Paulo - São Paulo / BR, Brasil, Todos os Aeroportos (SAO)" para "Nova York - New York / US, Estados Unidos da América, Todos os Aeroportos (NYC)"
+Dado que o usuário coloque o destino de "São Paulo" para "Nova York"
 E tenha que viaje na data "10052017" até "17052017"
+E efetuar a consulta

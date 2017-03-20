@@ -14,7 +14,7 @@ class HomePageLocator
     end
     
     def label_data_ida
-        @driver.input(id: 'txtOutboundDate')
+        @driver.input(class: 'txtOutboundDate grid-full hasDatepicker', id: 'txtOutboundDate')
     end
 
     def label_data_volta
@@ -27,6 +27,10 @@ class HomePageLocator
 
     def label_pacote
         @driver.div(class: 'titleBoxOfertas')
+    end
+
+    def btn_fechar_calendario
+        @driver.button(class: 'ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all ui-state-hover')
     end
 
 end
