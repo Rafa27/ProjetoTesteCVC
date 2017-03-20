@@ -13,8 +13,3 @@ Então(/^tenha que viaje na data "([^"]*)" até "([^"]*)"$/) do |data_ida, data_
 home_page.pesquisa_ida_volta(data_ida, data_volta)
 obter_evidencia
 end
-
-Então(/^efetuar a consulta$/) do
-efetuar_pesquisa
-obter_evidencia
-end

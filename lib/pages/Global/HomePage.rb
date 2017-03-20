@@ -11,12 +11,13 @@ class HomePage < HomePageLocator
     end
 
     def pesquisa_origin_destino (origin, destino)
-    validar_pagina_carregada
+    #validar_pagina_carregada
+    aguardar_loading
     preencher_origin(origin)
-    sleep 3
+    sleep 2
     pressionar_enter
     preencher_destino(destino)
-    sleep 3
+    sleep 2
     pressionar_enter
     end
 
@@ -24,6 +25,7 @@ class HomePage < HomePageLocator
     preencher_data_ida(data_ida)
     preencher_data_volta(data_volta)
     pressionar_enter
+    sleep 2
     efetuar_pesquisa
     end
 
