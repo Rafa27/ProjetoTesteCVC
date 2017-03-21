@@ -1,6 +1,11 @@
 require 'magic_encoding'
 require 'unicode_utils/upcase'
 
+def elemento_validar_valores(valor_esperado, elemento, nome_elemento)
+    valor_inicial = elemento.value
+    raise "Tela #{@tela} - Elemento #{nome_elemento} não possui o valor esperado. Esperado: #{valor_esperado}" unless valor_inicial.eql? valor_esperado
+end
+
 def clicar_elemento(locator_elemento, elemento)
 #def clicar_elemento(locator_elemento)
     elemento_existe?(locator_elemento, "#{elemento} a ser clicado")

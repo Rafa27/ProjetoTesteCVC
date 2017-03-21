@@ -13,3 +13,11 @@ Então(/^tenha que viaje na data "([^"]*)" até "([^"]*)"$/) do |data_ida, data_
 home_page.pesquisa_ida_volta(data_ida, data_volta)
 obter_evidencia
 end
+
+Transform /^(-?\d+)$/ do |valor_inicial_oferta|
+  valor_inicial_oferta.to_i
+end
+
+Dado(/^O valor seja maio que "([^"]*)"$/) do |valor_inicial_oferta|
+home_page.conferir_valor_inicial_oferta(valor_inicial_oferta)
+end

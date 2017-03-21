@@ -12,7 +12,7 @@ class HomePage < HomePageLocator
 
     def pesquisa_origin_destino (origin, destino)
     #validar_pagina_carregada
-    aguardar_loading
+    #aguardar_loading
     preencher_origin(origin)
     sleep 2
     pressionar_enter
@@ -36,11 +36,27 @@ class HomePage < HomePageLocator
     def efetuar_pesquisa
         clicar_elemento(btn_buscar, 'Buscar')
     end
+
+    def conferir_valor_inicial_oferta(valor_inicial_oferta)
+        aguardar_loading
+        validar_valores(valor_inicial_oferta)
+    end
     
 ###################################################################################
 
+    def validar_valores(valor_inicial_oferta)
+        elemento_validar_valores(valor_minimo_consulta, valor_inicial_oferta, 'Valor_inicial_de_promoção')
+    end
+
+=begin
+    
+testesteste
+    
+=end
+
+
     def validar_pagina_carregada
-    elemento_existe?(label_pacote, 'Pacotes')
+        elemento_existe?(label_pacote, 'Pacotes')
     end
 
     def preencher_origin(origin)

@@ -33,4 +33,8 @@ class HomePageLocator
         @driver.button(class: 'ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all ui-state-hover')
     end
 
+    def valor_minimo_consulta
+        @driver.div(id: 'spnAirMinPrice')
+    end
+
 end
